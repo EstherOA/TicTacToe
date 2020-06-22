@@ -18,7 +18,7 @@ export const updateGameStatus = (currentPlayer: string, gameState: IGameState, p
     
     if (gameState.board.includes(null))
         return;
-    getWinner(gameState.board);
+    gameState.winner = getWinner(gameState.board);
 }
 
 const getWinner = (board: any[]) => {
@@ -38,5 +38,5 @@ const getWinner = (board: any[]) => {
             return board[a];
         }
     }
-    return 'D';
+    return null;
 }

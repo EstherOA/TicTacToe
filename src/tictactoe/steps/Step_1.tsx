@@ -4,5 +4,5 @@ export interface IGameState {
     board: any[],
     xIsNext: boolean,
     status: 'COMPLETED' | 'ONGOING' | 'PAUSED' | 'INITIAL',
-    winner?: string | null;
+    winner: string | null;
 }
